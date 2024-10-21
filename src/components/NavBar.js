@@ -2,7 +2,7 @@ import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
-import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
+import GoogleSigninImg from "../img/btn_google_signin_dark_pressed_web.png";
 
 const NavBar = () => {
   const [user] = useAuthState(auth);
@@ -35,7 +35,7 @@ const NavBar = () => {
         <button className="sign-in">
           <img
             onClick={googleSignIn}
-            src={GoogleSignin}
+            src={GoogleSigninImg}
             alt="sign in with google"
             type="button"
           />

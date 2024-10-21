@@ -1,0 +1,65 @@
+.App {
+  background-color: #f7f9fc;
+  color: #2c3e50;
+}
+
+.nav-bar {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.sign-out {
+  color: #ffffff;
+  border: 1px solid #2980b9;
+  background-color: #2980b9;
+}
+
+.welcome {
+  color: #34495e;
+}
+
+.chat-bubble {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bubble.right {
+  background-color: #3498db;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+}
+
+.user-name {
+  color: #2980b9;
+}
+
+.send-message {
+  background-color: #ffffff;
+  border-top: 1px solid #ecf0f1;
+}
+
+.send-message > input {
+  background-color: #ffffff;
+  color: #2c3e50;
+  border: 1px solid #bdc3c7;
+}
+
+.send-message > input::placeholder {
+  color: #95a5a6;
+}
+
+.send-message > :is(input, button):focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.send-message > button {
+  border: none;
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.send-message > button:hover {
+  background-color: #2980b9;
+}

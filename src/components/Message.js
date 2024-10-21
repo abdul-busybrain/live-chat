@@ -2,7 +2,6 @@ import React from "react";
 
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import moment, { months } from "moment";
 
 const Message = ({ message }) => {
   const [user] = useAuthState(auth);
@@ -12,7 +11,7 @@ const Message = ({ message }) => {
       <img
         className="chat-bubble__left"
         src={message.avatar}
-        alt="user avatar"
+        alt="User Avatar"
       />
       <div className="chat-bubble__right">
         <p className="user-name">{message.name}</p>

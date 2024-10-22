@@ -1,8 +1,9 @@
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
+// Message component which receives "message" prop
 const Message = ({ message }) => {
-  const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth); // Get current user state
 
   // Format timestamp function
   const formatTimeStamp = (timestamp) => {

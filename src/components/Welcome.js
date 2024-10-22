@@ -5,10 +5,11 @@ import GoogleSigninImg from "../img/btn_google_signin_dark_pressed_web.png";
 import logoImg from "../img/logo.png";
 
 const Welcome = () => {
+  // Google Sign-in function
   const googleSignIn = () => {
-    const provider = new GoogleAuthProvider();
+    const provider = new GoogleAuthProvider(); // Created a Google auth provider
     try {
-      signInWithPopup(auth, provider);
+      signInWithPopup(auth, provider); // Launch Google sign-in popup
     } catch (error) {
       console.error("Error signing in with Google:", error);
     }

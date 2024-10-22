@@ -7,6 +7,7 @@ import ChatBox from "./components/ChatBox";
 import Welcome from "./components/Welcome";
 
 function App() {
+  // Get current user state using Firebase auth hook
   const [user] = useAuthState(auth);
 
   return (

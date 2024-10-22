@@ -1,10 +1,25 @@
-import React from "react";
-
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const Message = ({ message }) => {
   const [user] = useAuthState(auth);
+
+  // Format timestamp function
+  const formatTimeStamp = (timestamp) => {
+    if (!timestamp) return "";
+
+    // If timestamp is a Firebase Timestamp, Convert to JS Date
+    if (timestamp.toDate) {
+      return timestamp.toDate().toLocaleString();
+    }
+
+    // If timestamp is already a number (milliseconds)
+    if (typeof timestamp === "number") {
+      return new Date(timestamp).toLocaleString();
+    }
+
+    return "";
+  };
 
   return (
     <div className={`chat-bubble ${message.uid === user.uid ? "right" : ""}`}>
@@ -16,6 +31,7 @@ const Message = ({ message }) => {
       <div className="chat-bubble__right">
         <p className="user-name">{message.name}</p>
         <p className="user-message">{message.text}</p>
+        <span className="timestamp">{formatTimeStamp(message.createAt)}</span>
       </div>
     </div>
   );

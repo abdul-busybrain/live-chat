@@ -163,3 +163,15 @@ input {
   background-color: #7cc5d9;
   font-weight: 600;
 }
+
+/* My styles */
+.timestamp {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 5px;
+  display: block;
+}
+
+.chat-bubble.right .timestamp {
+  color: rgba(255, 255, 255, 0.8);
+}
